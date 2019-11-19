@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
+    "node-sass": "^4.13.0",
     "react-scripts": "3.2.0"
   },
   "dependencies": {
@@ -29,5 +30,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://iris.local"
 }

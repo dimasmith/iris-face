@@ -1,0 +1,33 @@
+.settlement {
+  display: flex;
+  flex-direction: column;
+
+  width: 30%;
+}
+
+.settlementDetails {
+  text-align: left;
+}
+
+.settlementDetailsRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.settlementDetailsRowLabel {
+  width: 50%;
+}
+
+.settlementDetailsRowValue {
+  width: 50%;
+}
+
+.settlementDetailsTotal {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 2px solid white;
+
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
