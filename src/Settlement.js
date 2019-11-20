@@ -38,17 +38,25 @@ function Mismatch(props) {
   </div>;
 }
 
-export function Settlement() {
+export function Settlement(props) {
 
+  const [time, setTime] = useState(new Date());
   const [settlement, setSettlement] = useState({settled: true});
   const [inProgress, setInProgress] = useState(true);
 
   useEffect(() => {
+    setInProgress(true);
     fetch('/api/v1/settlements')
-      .finally(() => setInProgress(false))
+      .finally(() => {
+        setInProgress(false);
+      })
       .then((r) => r.json())
       .then((s) => setSettlement(s));
-  }, []);
+  }, [time]);
+
+  if (props.time && props.time > time) {
+    setTime(props.time);
+  }
 
   if (inProgress) {
     return (<h2>Checking Balance</h2>);
