@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  devcontainer: 
+    image: mcr.microsoft.com/devcontainers/base:jammy    
+    network_mode: service:wiremock
+    volumes:
+      - ../..:/workspaces:cached
+    command: sleep infinity
+  wiremock:
+    image: wiremock/wiremock:latest    
+    volumes:
+      - ../proxy/__files:/home/wiremock/__files
+      - ../proxy/mappings:/home/wiremock/mappings
+    environment:
+      WIREMOCK_OPTIONS: "--local-response-templating"

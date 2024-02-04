@@ -1,0 +1,17 @@
+{
+    "id": "fc784c80-2817-4010-9031-4441ef34087c",
+    "name": "default-settlements",
+
+    "request": {
+        "method": "GET",
+        "url": "/api/v1/settlements"
+    },
+
+    "response": {
+        "status": 200,
+        "bodyFileName": "settlements/settlements.json",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+      }
+}
