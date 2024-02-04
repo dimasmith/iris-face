@@ -4,8 +4,6 @@
     "forwardPorts": [3000],
     "features": {
         "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
-        "ghcr.io/devcontainers/features/node:1": {
-            "version": "v12.22.12"
-        }
+        "ghcr.io/devcontainers/features/node:1": {}
     }
 }
