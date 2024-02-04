@@ -1,0 +1,11 @@
+{
+    "name": "Frontend",
+    "image": "mcr.microsoft.com/devcontainers/base:jammy",
+    "forwardPorts": [3000],
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "v10.24.1"
+        }
+    }
+}
